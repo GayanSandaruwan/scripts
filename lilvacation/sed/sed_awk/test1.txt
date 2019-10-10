@@ -1,0 +1,11 @@
+In the class cop4342, we will study Unix shell programming,
+Perl programming, advanced Unix tools/commands such as sed,
+awk, etc. For shell programming, we will focus on the bash
+shell, and for Perl, we will mostly cover the materials that are 
+most commonly used. For sed, awk, and other advanced tools,
+we will cover the basics so that you can start to use them.
+When you need more advanced features, you can check the manuals of 
+these tools.
+
+For all the tools, we will try to provide simple examples that 
+can help you to better understand the materials.
