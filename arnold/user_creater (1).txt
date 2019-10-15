@@ -1,0 +1,369 @@
+group {
+	"managers":
+		ensure => "present",
+		gid => "1000",
+		#comment => "Managers subgroup: mscott,dschrute,jhalpert",
+}
+group {
+	"sales":
+		ensure => "present",
+		gid => "1001",
+		#comment => "Sales Representative Sub Group: abernard, plapin, shudson",
+}
+group {
+	"accounting":
+		ensure => "present",
+		gid => "1002",
+		#comment => "Accountant subgroup: amartin, kmalone, omartinez",
+}
+group {
+	"leftbranch":
+		ensure => "present",
+		gid => "1003",
+		#comment => "dphilbin, amartin,cbratton,tflenderson",
+}
+group {
+	"rightbranch":
+		ensure => "present",
+		gid => "1004",
+		#comment => "mpalmer,pbeesly,kkapoor,abernard",
+}
+user{
+	"kleung":
+		uid => "501",
+		password=>"password",
+		ensure => present,
+		comment => "Kin Leung",
+		gid => "managers",
+		groups => ["managers","leftbranch","rightbranch","accounting","sales"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/kleung",
+		managehome => true, 
+}
+
+user{
+	"dschrute":
+		uid => "502",
+		password=>"password",
+		ensure => present,
+		comment => "Dwight Schrute",
+		gid => "managers",
+		groups => ["managers","leftbranch","accounting"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/dschrute",
+		managehome => true, 
+}
+user{
+	"jhalpert":
+		uid => "503",
+		password=>"password",
+		ensure => present,
+		comment => "Jim Halpert",
+		gid => "rightbranch",
+		groups => ["managers","rightbranch","sales"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/jhalpert",
+		managehome => true, 
+}
+
+user{
+	"dphilbin":
+		uid => "504",
+		password=>"password",
+		ensure => present,
+		comment => "Darryl Phylbin",
+		gid => "leftbranch",
+		groups => ["leftbranch","accounting"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/dphilbin",
+		managehome => true, 
+}
+
+user{
+	"tflenderson":
+		uid => "505",
+		password=>"password",
+		ensure => present,
+		comment => "Tobby Flenderson",
+		gid => "leftbranch",
+		groups => ["leftbranch","accounting"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/tflenderson",
+		managehome => true, 
+}
+user{
+	"cbratton":
+		uid => "506",
+		password=>"password",
+		ensure => present,
+		comment => "Creed Bratton",
+		gid => "leftbranch",
+		groups => ["leftbranch","accounting"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/cbratton",
+		managehome => true, 
+}
+user{
+	"amartin":
+		uid => "507",
+		password=>"password",
+		ensure => present,
+		comment => "angela martin",
+		gid => "leftbranch",
+		groups => ["leftbranch","accounting"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/amartin",
+		managehome => true, 
+}
+user{
+	"kmalone":
+		uid => "508",
+		password=>"password",
+		ensure => present,
+		comment => "Kevin Malone",
+		gid => "accounting",
+		groups => ["accounting"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/kmalone",
+		managehome => true, 
+}
+user{
+	"omartinez":
+		uid => "509",
+		ensure => present,
+		password=>"password",
+		comment => "Oscar Martinez",
+		gid => "accounting",
+		groups => ["accounting"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/omartinez",
+		managehome => true, 
+}
+user{
+	"mpalmer":
+		uid => "510",
+		password=>"password",
+		ensure => present,
+		comment => "Meredith Palmer",
+		gid => "rightbranch",
+		groups => ["rightbranch","sales"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/mpalmer",
+		managehome => true, 
+}
+user{
+	"kkapoor":
+		uid => "511",
+		password=>"password",
+		ensure => present,
+		comment => "Kelly Kapoor",
+		gid => "rightbranch",
+		groups => ["rightbranch","sales"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/kkapoor",
+		managehome => true, 
+}
+user{
+	"pbeesly":
+		uid => "512",
+		password=>"password",
+		ensure => present,
+		comment => "Pam Beesly",
+		gid => "rightbranch",
+		groups => ["rightbranch","sales"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/pbeesly",
+		managehome => true, 
+}
+user{
+	"abernard":
+		uid => "513",
+		password=>"password",
+		ensure => present,
+		comment => "Andy Bernard",
+		gid => "rightbranch",
+		groups => ["rightbranch","sales"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/abernard",
+		managehome => true, 
+}
+user{
+	"plapin":
+		uid => "514",
+		password=>"password",
+		ensure => present,
+		comment => "Phyllis Lapin",
+		gid => "rightbranch",
+		groups => ["rightbranch","sales"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/plapin",
+		managehome => true, 
+}
+user{
+	"shudson":
+		uid => "515",
+		password=>"password",
+		ensure => present,
+		comment => "Meredith Palmer",
+		gid => "rightbranch",
+		groups => ["rightbranch","sales"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/shudson",
+		managehome => true, 
+}
+user{
+	"mscott":
+		uid => "516",
+		password=>"password",
+		ensure => present,
+		comment => "Michael Scott",
+		gid => "managers",
+		groups => ["managers","leftbranch","rightbranch","accounting","sales"],
+		membership => minimum,
+		shell => "/bin/bash",
+		home => "/home/mscott",
+		managehome => true, 
+}
+file{
+	'/home/kleung':
+		ensure => "directory",
+		owner => 'kleung', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/mscott':
+		ensure => "directory",
+		owner => 'mscott', 
+		group => 'managers', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/dschrute':
+		ensure => "directory",
+		owner => 'dschrute', 
+		group => 'managers', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/jhalpert':
+		ensure => "directory",
+		owner => 'jhalpert', 
+		group => 'managers', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/dphilbin':
+		ensure => "directory",
+		owner => 'dphilbin', 
+		group => 'leftbranch', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/tflenderson':
+		ensure => "directory",
+		owner => 'tflenderson', 
+		group => 'leftbranch', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/cbratton':
+		ensure => "directory",
+		owner => 'cbratton', 
+		group => 'leftbranch', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/amartin':
+		ensure => "directory",
+		owner => 'amartin', 
+		group => 'leftbranch', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/kmalone':
+		ensure => "directory",
+		owner => 'kmalone', 
+		group => 'accounting', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/omartinez':
+		ensure => "directory",
+		owner => 'omartinez', 
+		group => 'accounting', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/mpalmer':
+		ensure => "directory",
+		owner => 'mpalmer', 
+		group => 'rightbranch', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/pbeesly':
+		ensure => "directory",
+		owner => 'pbeesly', 
+		group => 'rightbranch', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/kkapoor':
+		ensure => "directory",
+		owner => 'kkapoor', 
+		group => 'rightbranch', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/abernard':
+		ensure => "directory",
+		owner => 'abernard', 
+		group => 'rightbranch', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/plapin':
+		ensure => "directory",
+		owner => 'plapin', 
+		group => 'sales', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+file{
+	'/home/shudson':
+		ensure => "directory",
+		owner => 'shudson', 
+		group => 'sales', 
+		mode => '2750',
+		source =>'/etc/skel',
+}
+

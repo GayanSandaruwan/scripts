@@ -1,0 +1,3 @@
+FQDN NAME,Hostname,Alias FQDN Name,Alias Name
+server1.svr.us.xyz.net,server1,q1.svr.us.xyz.net,q1
+server2.svr.us.xyz.net,server2,q2.svr.us.xyz.net,q2
