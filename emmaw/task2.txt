@@ -1,0 +1,10 @@
+1) ps aux  | awk '{print $1}' | grep root | wc -l
+2) printenv | grep $USER
+3) ps -ef | grep  '\[.*]'
+4) cat /usr/share/dict/words | grep -P "(?=.*a)(?=.*e)(?=.*i)(?=.*o)(?=.*u)"
+5) cat /etc/passwd | cut -d: -f1,6
+6) ls -l /etc | grep "^.r..r..r"
+7) sudo ls -lt /etc| tail -1 | sed 's/\s\s*/ /g' | cut -d' ' -f6,7,8
+8) ls -lt /etc| sed 's/\s\s*/ /g' | cut -d' ' -f8|uniq -c | wc -l
+9) fortune | sed 'y/aeiou/AEIOU/'
+10) grep -rnw '/usr/share/games/fortunes' -e 'mark' | cut -d: -f1| uniq | wc -l
