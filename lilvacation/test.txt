@@ -1,0 +1,2 @@
+In this part of the assignment, you need to implement a simple “wc” program. (Please read the
+manual page of the word count wc Unix command to get more information on command wc.) Given a file

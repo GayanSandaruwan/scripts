@@ -23,9 +23,9 @@ for /f "usebackq delims=" %%I in (`powershell %psCommand%`) do set "target=%%I"
 set /p testMode="Press y for to start in test mode [y/n]?:"
 
 IF %testMode%==y (
-ROBOCOPY "%source%" "%target%"  /copy:DT /minage:%age% /E /V
+ROBOCOPY "%source%" "%target%"  /copy:DT /minage:%age% /E /V /log+:logs.txt /tee
 ) ELSE (
-ROBOCOPY "%source%" "%target%"  /mov /minage:%age% /E /V
+ROBOCOPY "%source%" "%target%"  /mov /minage:%age% /E /V /log+:logs.txt /tee
 )
 
 

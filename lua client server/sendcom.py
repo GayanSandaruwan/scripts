@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import fcntl, sys, termios
 from subprocess import check_output
 
