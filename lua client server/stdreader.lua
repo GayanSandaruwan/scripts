@@ -1,5 +1,10 @@
 #!/usr/bin/env lua
 
-io.write('Hello, what is your name? ')
-local name = io.read()
-io.write('Nice to meet you, ', name, '!\n')
+
+
+while(true)
+do
+   io.write('Hello, what is your name? ')
+	local name = io.read()
+	io.write('Nice to meet you, ', name, '!\n')
+end
