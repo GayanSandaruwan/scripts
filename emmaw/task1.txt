@@ -1,0 +1,10 @@
+1) echo ${EMPLOYEE_ID:0:4}
+2) ls -d /etc/*[dn]
+3) ps -u >> proclis
+4) cp -r data/ copy_of_data
+5) rm -r data
+6) sudo chmod u+x *.sh
+7) sudo chmod o-x *.sh
+8) tar -cvf book.tar book*
+9) grep 'banana\|apple\|orange' fruits
+10) sed 's/meat\|ham\|pork/veggie/g' recipe

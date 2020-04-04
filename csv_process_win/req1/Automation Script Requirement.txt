@@ -1,0 +1,31 @@
+Requirement 1:
+
+My Input to the automation script should be an excel/csv file. This will contain data in first 4 columns: columnA,columnB,columnC and columnD
+Now taking this as input the automation script should read each row in the excel/csv file and produce an output for each row in another text file in the below format:
+
+curl -u test:test -k https://columnA1_Value:8089/services/properties/server/general -d serverName=columnD1_value
+curl -u test:test -k https://columnA1_Value:8089/services/properties/inputs/default -d serverName=columnD1_value
+curl -u test:test -k https://columnA1_Value:8089/services/server/control/restart -X POST
+
+curl -u test:test -k https://columnA2_Value:8089/services/properties/server/general -d serverName=columnD2_value
+curl -u test:test -k https://columnA2_Value:8089/services/properties/inputs/default -d serverName=columnD2_value
+curl -u test:test -k https://columnA2_Value:8089/services/server/control/restart -X POST
+
+Only the column value part is dynamic and is based on the row values on the excel/csv file but the other texts are static. 
+
+Requirement 2:
+My Input to the automation script should be an excel/csv file. This file will contain data in first column only which will be hostname list.
+Now taking this as input the automation script should read each row in the excel/csv file and ping each of the hostname.
+
+(Now generally when you ping a hostname for example inputhost.svr.us.server.net, the output is generally like: Pinging test.svr.us.server.net [fe80::3960:fe38:dbc9:b3cf%10] with 32 bytes of data
+But the output of the automation Script should be an excel/csv file with 5 columns and each column value should be:
+columnA1 - hostname that you pinged (The value which is the input like for example: inputhost.svr.us.server.net)
+columnB1 - only the first part of the full hostname that you pinged .For example in our case if you ping inputhost.svr.us.server.net, columnB1 should only contain - inputhost
+columnC1 - Whatever hostname is there after the keyword - Pinging . For example in this case its is test.svr.us.server.net
+columnD1 - only the first part of the full hostname in columnC1 for example in this case its - test
+columnE1 - whatever is there inside the bracket . For example fe80::3960:fe38:dbc9:b3cf%10 in this case
+
+
+  
+
+
