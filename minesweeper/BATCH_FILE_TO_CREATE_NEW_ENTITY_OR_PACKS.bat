@@ -1,6 +1,5 @@
 :: create entity files
 :: v 1.0
-echo off
 @echo off
 goto skipcomment
 ********************************************************************
@@ -15,8 +14,9 @@ Date : 4/4/2020
 
 
 :get_pack_id
-set /p resource_pack_id=Choose the Resource Pack: 
-if %TestFirstNum% EQU 1 (
+set /p choose_resource_pack=Choose the Resource Pack: 
+set /a resource_pack_id=choose_resource_pack
+if %resource_pack_id% EQU 1 (
 	echo "Creating a New pack"
 	GOTO new_pack
 	) else (
@@ -24,12 +24,12 @@ if %TestFirstNum% EQU 1 (
 	)
 
 :new_pack
-set /p resource_pack_name=Enter Resource Pack Name
-set /p resource_pack_description=Enter Resource Pack Description
+set /p resource_pack_name=Enter Resource Pack Name: 
+set /p resource_pack_description=Enter Resource Pack Description: 
 GOTO new_entity
 
 :new_entity
-set /p entity_name=Enter Entity Name
+set /p entity_name=Enter Entity Name: 
 pause
 
 
