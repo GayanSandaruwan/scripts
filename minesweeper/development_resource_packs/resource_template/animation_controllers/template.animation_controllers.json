@@ -1,0 +1,48 @@
+{
+	"format_version" : "1.10.0",
+
+	// basic animation controller, add entries to the array to enable them, using data to change to new animations
+	// basic models will not need this, complex will require custom variables created in the scripts on the entity
+	"animation_controllers" : {
+		"controller.animation.template.attack_bare_hand" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"is_bare_hand" : "variable.is_holding_left != 1.0"
+						}
+					]
+				},
+				"is_bare_hand" : {
+					"animations": ["template_attack_bare_hand"],
+					"transitions" : [
+						{
+							"default" : "variable.is_holding_left == 1.0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.template.swimming": {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"is_swimming" : "variable.swim_amount > 0.0"
+						}
+					]
+				},
+				"is_swimming" : {
+					"animations": ["template_swimming"],
+					"transitions" : [
+						{
+							"default" : "variable.swim_amount <= 0.0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

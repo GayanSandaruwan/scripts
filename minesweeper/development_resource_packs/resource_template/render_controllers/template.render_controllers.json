@@ -1,0 +1,13 @@
+{
+
+  // basic render controller, uses defaults for quick rendering of model
+
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.template": {
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.default" ]
+    }
+  }
+}

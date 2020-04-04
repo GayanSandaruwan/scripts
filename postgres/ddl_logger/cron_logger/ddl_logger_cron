@@ -1,0 +1,8 @@
+current_directory="$(pwd)";
+echo "Installing the scripts in current directory $current_directory";
+
+logger_sh="${current_directory}/logger.sh";
+logger_output="${current_directory}/cron_log.txt"
+echo " Output of the cron will be put to $logger_output";
+
+sudo echo "* * * * * root bash ${logger_sh}  >> ${logger_output} 2>&1" > /etc/cron.d/ddl_logger

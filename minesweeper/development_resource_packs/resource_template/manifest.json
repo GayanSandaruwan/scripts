@@ -1,0 +1,18 @@
+{
+    "format_version": 1,
+    "header": {
+        "description": "template.desc",
+        "name": "template.name",
+        "uuid": "template.uuid.1",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 8, 0]
+    },
+    "modules": [
+        {
+            "description": "template.desc",
+            "type": "resources",
+            "uuid": "template.uuid.2",
+            "version": [1, 0, 0]
+        }
+    ]
+}
