@@ -1,0 +1,17 @@
+# /etc/systemd/system/afterlogout.service"
+# after_logout
+
+
+[Unit]
+Description=trigger-script-after-user-logout Service
+Before=reboot.target shutdown.target
+
+[Service]
+#Environment="USERUID=%i"
+RemainAfterExit=yes
+Type=simple
+ExecStart=/bin/bash pwd/fixed_scripts/executor.sh
+ExecStop=/bin/bash pwd/fixed_scripts/terminator.sh
+
+[Install]
+WantedBy=multi-user.target
